@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <main>
         <section id="part1">
             <h1>WELCOME TO RESUME BUILDER</h1>
+            
+            
             <div id="navbar">
                 <nav>
-                    <ul>
-                        <li><a href="#personal">Personal</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#skills-section">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <div class="logo">Resume Builder</div>
+                        <div class="hamburger" id="hamburger">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <ul class="nav-links" id="nav-links">
+                            <li><a href="#PI"><i class="fas fa-user"></i> Personal</a></li>
+                            <li><a href="#EI"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                            <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
+                            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
+
             <form id="form">
                 <input type="file" id="imageInput" placeholder="image" name="image" accept="image/*">
 
@@ -38,7 +46,7 @@
                     <input type="text" class="inputs" placeholder="Degree" id="degree">
                     <input type="text" class="inputs" placeholder="Institution" id="institution">
                     <input type="number" class="inputs" placeholder="Year" id="grad-year">
-                    <input type="text" class="inputs" placeholder="CGPA" id="CGPA">
+                    <input type="number" class="inputs" placeholder="CGPA" id="CGPA">
                 </div>
                 <div id="skills-section">
                     <h2 class="heading">Skills</h2>
@@ -63,7 +71,9 @@
                 <button type="submit">Generate Resume</button>
             </form>
         </section>
+
         <section id="part2">
+            <button id="edit-btn" onclick="toggleSections()">Edit Resume</button>
             <img id="resume-photo" src="" alt="Profile Photo">
             <h1 id="rname"></h1>
             <div class="section">
@@ -105,7 +115,6 @@
                 <div>LinkedIn: <span id="rlinkedin"></span></div>
                 <div>Github: <span id="rgithub"></span></div>
             </div>
-            <button id="edit-btn" onclick="toggleSections()">Edit Resume</button>
         </section>
     </main>
     <script src="script.js"></script>
