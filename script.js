@@ -103,7 +103,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
     filename: 'my_resume.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
   };
 
   // Generate PDF
