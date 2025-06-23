@@ -1,13 +1,4 @@
-document.getElementById('downloadPdf').addEventListener('click', () => {
-  const resumeElement = document.getElementById('print'); 
-  
-  const options = {
-    margin: 10,
-    filename: 'my_resume.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
-  };
+
 
 
 // Navigation functionality
@@ -108,7 +99,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
     document.getElementById("part2").style.display = "block";
 
     
-  // Generate PDF
-  html2pdf().from(resumeElement).set(options).save();
+  
 });
 });
