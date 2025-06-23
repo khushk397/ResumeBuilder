@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 </head>
 <body>
-    <main>
-        <section id="part1">
-            <h1>WELCOME TO RESUME BUILDER</h1>
-            
-            
-            <div id="navbar">
-                <nav>
-                    <div class="nav-container">
-                        <div class="logo">Resume Builder</div>
-                        <div class="hamburger" id="hamburger">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <ul class="nav-links" id="nav-links">
-                            <li><a href="#PI"><i class="fas fa-user"></i> Personal</a></li>
-                            <li><a href="#EI"><i class="fas fa-graduation-cap"></i> Education</a></li>
-                            <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
-                            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
+  <main>
+    <section id="part1">
+      <h1>WELCOME TO RESUME BUILDER</h1>
+      <div id="navbar">
+        <nav>
+          <div class="nav-container">
+            <div class="logo">Resume Builder</div>
+            <div class="hamburger" id="hamburger">
+              <i class="fas fa-bars"></i>
             </div>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="#PI"><i class="fas fa-user"></i> Personal</a></li>
+              <li><a href="#EI"><i class="fas fa-graduation-cap"></i> Education</a></li>
+              <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
+              <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+              <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
-            <form id="form">
-                <input type="file" id="imageInput" placeholder="image" name="image" accept="image/*">
+      <form id="form">
+        <input type="file" id="imageInput" name="image" accept="image/*" />
 
-                <div id="PI">
-                    <h2 class="heading">Personal Information</h2>
-                    <input type="text" class="inputs" placeholder="Your Name" id="name" required>
-                    <input type="email" class="inputs" placeholder="Email" id="email" required>
-                    <input type="tel" class="inputs" placeholder="Mobile no." id="phone">
-                    <input type="text" class="inputs" placeholder="Address" id="address">
-                </div>
-                <div id="EI">
-                    <h2 class="heading">Education</h2>
-                    <input type="text" class="inputs" placeholder="Degree" id="degree">
-                    <input type="text" class="inputs" placeholder="Institution" id="institution">
-                    <input type="number" class="inputs" placeholder="Year" id="grad-year">
-                    <input type="number" class="inputs" placeholder="CGPA" id="CGPA">
-                </div>
-                <div id="skills-section">
-                    <h2 class="heading">Skills</h2>
-                    <input type="text" class="inputs" id="skills-input" placeholder="e.g. HTML, CSS, JS" required>
-                    <input type="number" class="inputs" placeholder="No of Internship" id="internship">
-                </div>
-                <div id="projects">
-                    <h2 class="heading">Projects</h2>
-                    <input type="text" class="inputs" placeholder="Project Title 1" id="project-title1">
-                    <textarea placeholder="Project 1 Description" class="inputs" id="project-desc1"></textarea>
-                    <input type="text" class="inputs" placeholder="Project Title 2" id="project-title2">
-                    <textarea placeholder="Project 2 Description" class="inputs" id="project-desc2"></textarea>
-                    <input type="text" class="inputs" placeholder="Project Title 3" id="project-title3">
-                    <textarea placeholder="Project 3 Description" class="inputs" id="project-desc3"></textarea>
-                </div>
-                <div id="contact">
-                    <h2>Contact</h2>
-                    <input type="text" class="inputs" placeholder="LinkedinId" id="linkedin">
-                    <input type="text" class="inputs" placeholder="GithubId" id="github">
-                </div>
-                <br>
-                <button type="submit">Generate Resume</button>
-            </form>
-        </section>
+        <div id="PI">
+          <h2 class="heading">Personal Information</h2>
+          <input type="text" class="inputs" placeholder="Your Name" id="name" required />
+          <input type="email" class="inputs" placeholder="Email" id="email" required />
+          <input type="tel" class="inputs" placeholder="Mobile no." id="phone" />
+          <input type="text" class="inputs" placeholder="Address" id="address" />
+        </div>
 
-        <section id="part2">
-            <img id="resume-photo" src="" alt="Profile Photo">
-            <h1 id="rname"></h1>
-            <div class="section">
-                <h2>Contact Information</h2>
-                <div>Email: <span id="remail"></span></div>
-                <div>Mobile: <span id="rmobileno"></span></div>
-                <div>Address: <span id="raddress"></span></div>
-            </div>
-            <div class="section">
-                <h2>Education</h2>
-                <div>Degree: <span id="rdegree"></span></div>
-                <div>Institution: <span id="rinstitution"></span></div>
-                <div>Year: <span id="ryear"></span></div>
-                <div>CGPA: <span id="rcgpa"></span></div>
-            </div>
-            <div class="section">
-                <h2>Skills</h2>
-                <ul id="rskills"></ul>
-            </div>
-            <div class="section">
-                <h2>Projects</h2>
-                <ul>
-                    <li>
-                        <h3 id="RPT1"></h3>
-                        <p id="RPD1"></p>
-                    </li>
-                    <li>
-                        <h3 id="RPT2"></h3>
-                        <p id="RPD2"></p>
-                    </li>
-                    <li>
-                        <h3 id="RPT3"></h3>
-                        <p id="RPD3"></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>Online Profiles</h2>
-                <div>LinkedIn: <span id="rlinkedin"></span></div>
-                <div>Github: <span id="rgithub"></span></div>
-            </div>
-             <button id="edit-btn" onclick="toggleSections()">Edit Resume</button>
-        </section>
-    </main>
-    <script src="script.js"></script>
+        <div id="EI">
+          <h2 class="heading">Education</h2>
+          <input type="text" class="inputs" placeholder="Degree" id="degree" />
+          <input type="text" class="inputs" placeholder="Institution" id="institution" />
+          <input type="number" class="inputs" placeholder="Year" id="grad-year" />
+          <input type="number" class="inputs" placeholder="CGPA" id="CGPA" />
+        </div>
+
+        <div id="skills-section">
+          <h2 class="heading">Skills</h2>
+          <input type="text" class="inputs" id="skills-input" placeholder="e.g. HTML, CSS, JS" required />
+          <input type="number" class="inputs" placeholder="No of Internships" id="internship" />
+        </div>
+
+        <div id="projects">
+          <h2 class="heading">Projects</h2>
+          <input type="text" class="inputs" placeholder="Project Title 1" id="project-title1" />
+          <textarea placeholder="Project 1 Description" class="inputs" id="project-desc1"></textarea>
+          <input type="text" class="inputs" placeholder="Project Title 2" id="project-title2" />
+          <textarea placeholder="Project 2 Description" class="inputs" id="project-desc2"></textarea>
+          <input type="text" class="inputs" placeholder="Project Title 3" id="project-title3" />
+          <textarea placeholder="Project 3 Description" class="inputs" id="project-desc3"></textarea>
+        </div>
+
+        <div id="contact">
+          <h2>Contact</h2>
+          <input type="text" class="inputs" placeholder="LinkedIn ID" id="linkedin" />
+          <input type="text" class="inputs" placeholder="GitHub ID" id="github" />
+        </div>
+        <br />
+        <button type="submit">Generate Resume</button>
+      </form>
+    </section>
+
+    <section id="part2">
+      <img id="resume-photo" src="" alt="Profile Photo" />
+      <h1 id="rname"></h1>
+
+      <div class="section">
+        <h2>Contact Information</h2>
+        <div>Email: <span id="remail"></span></div>
+        <div>Mobile: <span id="rmobileno"></span></div>
+        <div>Address: <span id="raddress"></span></div>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <div>Degree: <span id="rdegree"></span></div>
+        <div>Institution: <span id="rinstitution"></span></div>
+        <div>Year: <span id="ryear"></span></div>
+        <div>CGPA: <span id="rcgpa"></span></div>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <ul id="rskills"></ul>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><h3 id="RPT1"></h3><p id="RPD1"></p></li>
+          <li><h3 id="RPT2"></h3><p id="RPD2"></p></li>
+          <li><h3 id="RPT3"></h3><p id="RPD3"></p></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Online Profiles</h2>
+        <div>LinkedIn: <span id="rlinkedin"></span></div>
+        <div>GitHub: <span id="rgithub"></span></div>
+      </div>
+      <button id="download-pdf-btn">Download PDF</button>
+      <button id="edit-btn" onclick="toggleSections()">Edit Resume</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
